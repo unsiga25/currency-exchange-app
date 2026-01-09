@@ -1,8 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
+  "overrides": [
+    {
+      "files": ["*.cjs", "__mocks__/**/*.js"],
+      "env": {
+        "node": true
+      }
+    }
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",

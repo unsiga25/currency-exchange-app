@@ -1,84 +1,114 @@
-# Currency Exchange App
+# Currency Exchange App :money_with_wings:
 
-A simple React application built with **Vite**.  
-This project demonstrates a basic React setup showcasing a simple Currency Converter, dependency installation, and how to run the app locally.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
+[![Vite](https://img.shields.io/badge/vite-%5E4.0.0-646CFF.svg)](https://vitejs.dev/)
 
----
+A modern currency exchange application built with React and Vite, featuring real-time exchange rates and historical data visualization.
 
-## Prerequisites
+![App Screenshot](./public/screenshot.png)
 
-Before installing the project, ensure you have the following installed:
+## :sparkles: Features
 
-- **Node.js** (24 LTS or later recommended)
-- **npm** (bundled with Node.js)
-- **Git** (optional, for cloning the repository)
+- Real-time currency exchange rates
+- Historical exchange rate charts
+- Support for 150+ global currencies
+- Interactive currency converter
+- Responsive design for all screen sizes
+- Unit testing with Jest and React Testing Library
+- Type-safe implementation with TypeScript
 
-Verify installation by running:
+## :computer: Prerequisites
 
+- [Node.js](https://nodejs.org/) 18.0.0 or higher
+- [npm](https://www.npmjs.com/) 9.0.0 or higher
+- [Git](https://git-scm.com/) (optional)
+
+Verify installations:
 ```bash
-node -v
-npm -v
+node --version
+npm --version
+```
 
-Installation
+## :rocket: Installation
 
-Follow these steps to install and set up the project locally.
-
-1. Clone the repository
+1. Clone the repository:
+```bash
 git clone https://github.com/unsiga25/currency-exchange-app.git
+```
 
-2. Navigate into the project directory
+2. Navigate to project directory:
+```bash
 cd currency-exchange-app
+```
 
-3. Install dependencies
+3. Install dependencies:
+```bash
 npm install
+```
 
+## :gear: Development
 
-This installs all required packages defined in package.json.
-
-Running the Application (Development)
-
-Start the local development server:
-
+Start the development server:
+```bash
 npm run dev
+```
 
-
-Vite will output a local URL, typically:
-
+The application will be available at:
+```
 http://localhost:5173
+```
 
+## :test_tube: Testing
 
-Open this URL in your browser to view the application.
-
-Running Tests
-
-This project includes unit tests using Jest.
-
-Run all tests once
+Run unit tests:
+```bash
 npm test
+```
 
-Run tests in watch mode
+Run tests in watch mode:
+```bash
 npm run test:watch
+```
 
-Building for Production
+Generate test coverage report:
+```bash
+npm run test:coverage
+```
 
-To generate a production-ready build:
+## :package: Production Build
 
+Create optimized production build:
+```bash
 npm run build
+```
 
-
-The output will be created in the dist/ folder.
-
-Previewing the Production Build
-
-To locally preview the production build:
-
+Preview production build locally:
+```bash
 npm run preview
+```
 
-Available Scripts
-Command	Description
-npm install	Installs project dependencies
-npm run dev	Starts the development server
-npm test	Runs unit tests
-npm run test:watch	Runs tests in watch mode
-npm run build	Builds the app for production
-npm run preview	Previews the production build
+## :wrench: Available Scripts
+
+| Command            | Description                              |
+|--------------------|------------------------------------------|
+| `npm run dev`      | Start development server                 |
+| `npm run build`    | Create production build                  |
+| `npm run preview`  | Preview production build                 |
+| `npm test`         | Run unit tests                           |
+| `npm run test:dev` | Run tests in watch mode                  |
+| `npm run lint`     | Run ESLint with auto-fix                 |
+| `npm run format`   | Format code with Prettier                |
+
+## :handshake: Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+## :page_facing_up: License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

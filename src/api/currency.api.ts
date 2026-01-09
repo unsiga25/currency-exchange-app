@@ -14,7 +14,7 @@ export const currencyApi = {
   fetchExchangeRate: async (baseCurrency: string, date: string): Promise<ExchangeRateData | null> => {
     const response = await fetch(`${BASE_URL}@${date}/v1/currencies/${baseCurrency}.json`);
     if (!response.ok) {
-      return null;
+      throw new Error('Failed to fetch rates');
     }
     return response.json();
   },

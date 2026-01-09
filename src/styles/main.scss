@@ -1,0 +1,232 @@
+// Variables
+$primary-color: #4f46e5;
+$secondary-color: #06b6d4;
+$background-gradient: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+$white: #ffffff;
+$border-radius: 16px;
+$box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $background-gradient;
+  min-height: 100vh;
+}
+
+// Page Container
+.page-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: $background-gradient;
+}
+
+// Main Card
+.main-card {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__icon {
+    color: $primary-color;
+  }
+}
+
+// Controls Section
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+// Currency Management
+.currency-management {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  &__title-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+  }
+}
+
+// Add Currency Panel
+.add-currency-panel {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 0.5rem;
+  }
+
+  &__currency-button {
+    text-align: left;
+    padding: 0.75rem;
+  }
+
+  &__currency-code {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  &__currency-name {
+    font-size: 0.75rem;
+    color: #6b7280;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// Exchange Rate Table
+.exchange-table {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+
+  &__container {
+    min-width: 800px;
+  }
+
+  &__currency-cell {
+    font-weight: 600;
+  }
+
+  &__currency-code {
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  &__currency-name {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  &__rate {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+  }
+
+  &__na {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+}
+
+// Info Banner
+.info-banner {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: 12px;
+  padding: 1rem;
+
+  &__text {
+    color: #1e40af;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+// Loading Spinner
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+// Error Message
+.error-message {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  &__icon {
+    color: #dc2626;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    color: #991b1b;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .currency-management {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
